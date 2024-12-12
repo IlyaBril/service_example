@@ -2,12 +2,12 @@ FROM python:3.7
 
 COPY requirements.txt ./requirements.txt
 
-ENV PYTHONPATH=./src
+ENV PYTHONPATH=./app
 RUN pip install -r requirements.txt
-COPY ./src ./src
+COPY ./app ./app
 COPY ./test ./test
 
 
-CMD ["python", "./src/main/py"]
+CMD ["python", "./app/main/py"]
 
 
