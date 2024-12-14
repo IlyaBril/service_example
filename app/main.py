@@ -1,7 +1,6 @@
 from flask import Flask
-from waitress import serve
 
-from api.handler import dummy_handler
+from app.api.handler import dummy_handler
 
 def create_app():
     app = Flask("test_app")
@@ -10,4 +9,4 @@ def create_app():
 
 if __name__ == '__main__':
     app = create_app()
-    serve(app, host='127.0.0.1', port=5000)
+    app.run(host='127.0.0.1', port=5000)
